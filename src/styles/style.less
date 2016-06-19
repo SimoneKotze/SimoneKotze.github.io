@@ -1,0 +1,264 @@
+@hoverColor: #162643;
+@activeColor: #62B1F6;
+
+/************************************/
+/*********       Main       *********/
+/************************************/
+
+body{
+  background: #fff ;
+  //font-family: 'Shadows Into Light', cursive;
+  //font-family: 'Satisfy', cursive;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+
+a, a:hover, a:active, a:focus{
+  outline: 0;
+}
+
+.container-fluid{
+  padding: 0;
+}
+.body-div{
+  margin-top: 50px;
+  font-family: 'Handlee', cursive;
+}
+
+hr{
+  height: 25px;
+  border-style: solid;
+  border-color: #222;
+  border-width: 1px 0 0 0;
+  border-radius: 150px;
+  width: 50%;
+}
+hr:before{
+  display: block;
+  content: "";
+  height: 25px;
+  margin-top: -25px;
+  border-style: solid;
+  border-color: #222;
+  border-width: 0 0 1px 0;
+  border-radius: 150px;
+  width: 100%;
+}
+
+/************************************/
+/********       Navbar       ********/
+/************************************/
+
+.navbar{
+  background: #fff;
+  border: 0;
+  box-shadow: 0 0 10px 2px #222;
+}
+
+.navbar-header{
+  padding: 0 5px 0 15px;
+  transition: all .3s;
+}
+.navbar-header:hover{
+  background: @hoverColor;
+}
+.navbar-header:hover .navbar-brand{
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
+.navbar-brand{
+  color: #222;
+  font-size: 2em;
+  transition: all .3s;
+}
+.navbar .active{
+  background: @activeColor;
+  color: #000;
+}
+
+.navbar .navbar-right{
+  padding-right: 15px;
+}
+.navbar .navbar-nav a{
+  color: #222;
+  font-size: 1.4em;
+  transition: all .3s;
+}
+
+.navbar .navbar-nav a:hover{
+  background: @hoverColor;
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+.navbar .navbar-nav .active{
+  background: @activeColor;
+  color: #000;
+}
+.navbar .navbar-nav a:active,
+.navbar .navbar-nav a:focus{
+}
+
+/************************************/
+/********      Carousel      ********/
+/************************************/
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      transition-property: opacity;
+    }
+    .item,
+    .active.left,
+    .active.right {
+      opacity: 0;
+    }
+    .active,
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+    .next,
+    .prev,
+    .active.left,
+    .active.right {
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+.carousel-bg {
+  .carousel-inner {
+    .item {
+      height: 500px;
+    }
+  }
+}
+
+/************************************/
+/*********      About       *********/
+/************************************/
+
+#about{
+  box-shadow: 0 0 10px 2px #222;
+  z-index: 2;
+}
+
+#about .fa-stack{
+  text-shadow: 0 0 5px 2px #222;
+  font-size: 4em;
+}
+#about .fa-stack .fa-stack-2x{
+  color: @hoverColor;
+}
+#about .fa-stack .fa-stack-1x{
+  color: #fff;
+  text-shadow: 0 0 2px #fff;
+}
+
+#about p{
+  font-size: 1.3em;
+}
+
+/************************************/
+/********      Memories       *******/
+/************************************/
+
+#memories{
+  background: @activeColor;
+  box-shadow: 0 0 15px 1.5px #222;
+  z-index: 2;
+}
+
+#memories img{
+  border: 2px solid @hoverColor;
+  border-radius: 100%;
+  height: 180px;
+  transition: all .2s;
+  width : 180px;
+}
+
+#memories p{
+  font-size: 1.3em;
+}
+
+/************************************/
+/********      Section       ********/
+/************************************/
+
+#section{
+  padding: 50px 0;
+}
+
+/************************************/
+/********      Contact       ********/
+/************************************/
+
+#contact {
+  background: #eee;
+  box-shadow: 0 0 15px 1.5px #222;
+  padding: 10px 0 30px;
+}
+#contact i{
+  color: @hoverColor;
+  font-size: 3em;
+}
+#contact .fa-facebook,
+#contact .fa-twitter{
+  color: @hoverColor;
+  font-size: 7.5em;
+  padding: 50px 0 0;
+  transition: all .2s;
+}
+#contact .fa-facebook:hover,
+#contact .fa-twitter:hover{
+  color: @activeColor;
+  text-shadow: 0 0 10px @activeColor;
+}
+
+#contact a{
+  color: #000;
+  text-decoration: none;
+  transition: all .2s;
+}
+#contact a:hover{
+  color: @activeColor;
+  text-decoration: none;
+  text-shadow: 0 0 5px #fff;
+}
+
+#contact img{
+  border-radius: 70px;
+  box-shadow: 0 0 5px 3px #222;
+  width : 75%;
+}
+
+#contact form{
+  text-align: left;
+}
+#contact form input,
+#contact form textarea{
+  border-radius: 10px;
+  font-size: 1.5em;
+  margin-top: 2%;
+  padding: 5px;
+  text-align: center;
+  width: 90%;
+}
+
+/************************************/
+/********      Respond       ********/
+/************************************/
+
+@media (max-width: 1920px) {
+  #contact img{
+    width : 50%;
+  }
+}
+
+@media (max-width: 1768px) {
+  #contact img{
+    width : 60%;
+  }
+}
